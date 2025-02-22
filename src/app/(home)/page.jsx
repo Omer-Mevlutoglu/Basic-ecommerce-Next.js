@@ -2,6 +2,8 @@ import Footer from "components/Footer/Footer";
 import Header from "components/Header/Header";
 import "./home.css";
 import Products from "./Products";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Home() {
   return (
     <>
@@ -21,7 +23,13 @@ export default function Home() {
       </div>
       <main>
         <h1 className="recommended">
-          <i className="fa-solid fa-check" />
+          <FontAwesomeIcon
+            className="fa-solid fa-check"
+            style={{
+              width: "1.1rem",
+            }}
+            icon={faCheck}
+          />
           Recommended for you
         </h1>
         <Products />

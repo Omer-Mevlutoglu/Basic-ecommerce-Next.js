@@ -11,7 +11,7 @@ import Link from "next/link";
 const Header = () => {
   return (
     <header id="headerElement" className="flex">
-      <div className="logo">
+      <Link href={"/"} className="logo">
         <FontAwesomeIcon
           className="fa-solid fa-bag-shopping"
           style={{
@@ -22,11 +22,9 @@ const Header = () => {
         />
         <span style={{ fontWeight: "bold" }}>AWU</span>
         <p style={{ letterSpacing: "0.5px" }}>Shopping</p>
-      </div>
-
+      </Link>
 
       <nav className="links">
-
         <Link style={{ position: "relative" }} className="cart" href="/cart">
           <FontAwesomeIcon
             className="fa-solid fa-cart-shopping"
@@ -39,7 +37,6 @@ const Header = () => {
           <span className="products-number">2</span>
         </Link>
 
-
         <Link className="sign-in" href="/signIn">
           <FontAwesomeIcon
             className="fa-solid fa-right-to-bracket"
@@ -50,7 +47,6 @@ const Header = () => {
           />
           Sign in
         </Link>
-
 
         <Link className="register" href="/register">
           <i className="fa-solid fa-user-plus" />
@@ -63,8 +59,6 @@ const Header = () => {
           />
           Register
         </Link>
-
-        
       </nav>
     </header>
   );
