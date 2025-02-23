@@ -3,6 +3,7 @@ import Header from "components/Header/Header";
 import "./productdetails.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
+import { notFound } from "next/navigation";
 /**
  * @param {any} id
  */
@@ -12,7 +13,7 @@ async function getData(id) {
   });
 
   if (!res.ok) {
-    throw new Error("Failed to fetch data");
+    notFound();
   }
 
   return res.json();
