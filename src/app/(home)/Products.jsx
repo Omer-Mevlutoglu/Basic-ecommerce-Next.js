@@ -2,17 +2,6 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 
-// const srcs = [
-//   { ProductImage: "./images/1.png" },
-//   { ProductImage: "./images/2.webp" },
-//   { ProductImage: "./images/3.webp" },
-//   { ProductImage: "./images/4.webp" },
-//   { ProductImage: "./images/5.webp" },
-//   { ProductImage: "./images/6.webp" },
-//   { ProductImage: "./images/7.webp" },
-//   { ProductImage: "./images/8.png" },
-// ];
-
 const Products = async () => {
   try {
     const response = await fetch("http://localhost:3001/products", {
