@@ -4,6 +4,7 @@ import "./productdetails.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 /**
  * @param {any} id
  */
@@ -42,7 +43,7 @@ const Page = async ({ params }) => {
     >
       <Header />
       <main style={{ textAlign: "center" }} className="flex">
-        <img alt="" src={objData.productImg} />
+        <Image width={266} height={260} alt="ssss" src={objData.productImg} />
         <div className="product-details">
           <div style={{ justifyContent: "space-between" }} className="flex">
             <h2>{objData.title}</h2>

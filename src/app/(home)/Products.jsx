@@ -1,7 +1,7 @@
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-
+import Image from "next/image";
 const Products = async () => {
   try {
     const response = await fetch("http://localhost:3001/products", {
@@ -20,7 +20,7 @@ const Products = async () => {
         {arrData.map((item) => (
           <article title={item.title} key={item.id} className="card">
             <Link href={`/productdetails/${item.id}`}>
-              <img width={266} src={item.productImg} />
+              <Image height={260} alt="sss" width={266} src={item.productImg} />
             </Link>
             <div style={{ width: 266 }} className="content">
               <h1 className="title">{item.title}</h1>
