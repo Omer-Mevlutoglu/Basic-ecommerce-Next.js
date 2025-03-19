@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Cart page",
-  description: "description for home paga",
+  description: "description for cart paga",
 };
 
 const Page = () => {

@@ -2,19 +2,20 @@ import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import Image from "next/image";
+import { arrData } from "data/products";
 const Products = async () => {
   try {
-    const response = await fetch("http://localhost:3001/products", {
-      cache: "no-store",
-    });
+    // const response = await fetch("http://localhost:3001/products", {
+    //   cache: "no-store",
+    // });
 
-    if (!response.ok) {
-      throw new Error(
-        `Failed to fetch products: ${response.status} ${response.statusText}`
-      );
-    }
+    // if (!response.ok) {
+    //   throw new Error(
+    //     `Failed to fetch products: ${response.status} ${response.statusText}`
+    //   );
+    // }
 
-    const arrData = await response.json();
+    // const arrData = await response.json();
     return (
       <section className="products flex">
         {arrData.map((item) => (

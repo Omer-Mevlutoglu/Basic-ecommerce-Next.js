@@ -5,33 +5,36 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartPlus } from "@fortawesome/free-solid-svg-icons";
 import { notFound } from "next/navigation";
 import Image from "next/image";
+import { arrData } from "data/products";
+
 /**
  * @param {any} id
  */
-async function getData(id) {
-  const res = await fetch(`http://localhost:3001/products/${id}`, {
-    cache: "no-store",
-  });
+// async function getData(id) {
+//   const res = await fetch(`http://localhost:3001/products/${id}`, {
+//     cache: "no-store",
+//   });
 
-  if (!res.ok) {
-    notFound();
-  }
+//   if (!res.ok) {
+//     notFound();
+//   }
 
-  return res.json();
-}
+//   return res.json();
+// }
+// export async function generateMetadata({ params }) {
+//   // const objData = await getData(params.id);
 
-export async function generateMetadata({ params }) {
-  const objData = await getData(params.id);
-
-  return {
-    title: objData.title,
-    description: objData.description,
-  };
-}
+//   return {
+//     title: objData.title,
+//     description: objData.description,
+//   };
+// }
 
 const Page = async ({ params }) => {
-  const objData = await getData(params.id);
-
+  // const objData = await getData(params.id);
+  const objData = arrData.find((item) => {
+    return item.id == params.id;
+  });
   return (
     <div
       style={{
