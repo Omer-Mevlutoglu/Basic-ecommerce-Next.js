@@ -33,8 +33,8 @@ const Header = () => {
             }}
             icon={faCartShopping}
           />
-          $0.00
-          <span className="products-number">2</span>
+          $500.00
+          <span className="products-number">1</span>
         </Link>
 
         <Link className="sign-in" href="/signIn">
