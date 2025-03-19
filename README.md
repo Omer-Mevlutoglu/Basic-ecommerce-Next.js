@@ -4,7 +4,6 @@
 ![Next.js](https://img.shields.io/badge/Next.js-13.5.6-black?logo=next.js&style=flat)
 ![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react&style=flat)
 ![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-black?logo=vercel&style=flat)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 **A modern ecommerce experience built for the future of online shopping.**  
 Live Demo: [https://basic-ecommerce-next-js.vercel.app/](https://basic-ecommerce-next-js.vercel.app/) 🔗
